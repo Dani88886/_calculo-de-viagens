@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+   <head>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"  >
+          <link rel="shortcut icon" href="_imagens/Html-5.ico">
+
+   </head>
+
+   <body>
+
+      <button type="button" class="btn btn-primary">Calculo de Viagem</button>
+      <br>
+      <div class='alert alert-primary' role='alert'>
+         Orçamento
+      </div>
+    
+      <script>
+         var botao= document.querySelector("button");
+         botao.addEventListener("click", Calculo );
+         
+
+         function Calculo () {
+         var nome = prompt('Insira seu nome:');
+            var quantidadepassageiros = prompt('Insira a quantidade de passageiros:');
+              var valorviagem = prompt('Insira o valor da viagem:');
+          
+                var resultado= valorviagem * quantidadepassageiros;
+                var mensagem = "Orçamento \n Nome do cliente: " + nome + "\n";
+                mensagem = mensagem + "Valor da Viagem: " + resultado;
+
+
+
+window.alert(mensagem);
+         
+               document.querySelector("div").innerHTML= mensagem;
+         
+      
+         } 
+         
+      </script>
+   </body>
+</html>
